@@ -32,6 +32,7 @@ void ToString() {
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(pairNumber);
         cout<<pairNumber<<"\t"<<colorPair.ToString()<<endl;
+    }
 }
 
 int main() {
