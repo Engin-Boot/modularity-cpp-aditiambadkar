@@ -25,7 +25,7 @@ void testPairToNumber(
     assert(pairNumber == expectedPairNumber);
 }
 
-void toString() {
+void ToString() {
     cout<<"Number to Color Mapping"<<endl;
     cout<<"Pair Number"<<"\t"<<"Major Minor"<<endl;
     for(int pairNumber = 1; pairNumber <= 25; pairNumber++) {
@@ -41,7 +41,7 @@ int main() {
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
     
-    toString();
+    ToString();
 
     return 0;
 }
