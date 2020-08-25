@@ -1,10 +1,9 @@
 #include <iostream>
 #include <assert.h>
+#include<string>
 #include "ColorPair.h"
 
-using namespace std;
-
-void testNumberToPair(int pairNumber,
+void testNumberToPair(int pairNumber, 
     TelCoColorCoder::MajorColor expectedMajor,
     TelCoColorCoder::MinorColor expectedMinor)
 {
@@ -25,14 +24,18 @@ void testPairToNumber(
     assert(pairNumber == expectedPairNumber);
 }
 
-void ToString() {
-    cout<<"Number to Color Mapping"<<endl;
-    cout<<"Pair Number"<<"\t"<<"Major Minor"<<endl;
+std::string ToString()
+{
+    std::string codeToColorsMappings = "";
     for(int pairNumber = 1; pairNumber <= 25; pairNumber++) {
         TelCoColorCoder::ColorPair colorPair =
         TelCoColorCoder::GetColorFromPairNumber(pairNumber);
-        cout<<pairNumber<<"\t"<<colorPair.ToString()<<endl;
+        codeToColorsMappings += std::to_string(pairNumber);
+        codeToColorsMappings += " "; 
+        codeToColorsMappings += colorPair.ToString();
+        codeToColorsMappings += " ";
     }
+    return codeToColorsMappings;
 }
 
 int main() {
@@ -41,8 +44,6 @@ int main() {
 
     testPairToNumber(TelCoColorCoder::BLACK, TelCoColorCoder::ORANGE, 12);
     testPairToNumber(TelCoColorCoder::VIOLET, TelCoColorCoder::SLATE, 25);
-    
-    ToString();
-
+    std::cout<<ToString()<<std::endl;
     return 0;
 }
