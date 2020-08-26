@@ -41,4 +41,10 @@ namespace TelCoColorCoder {
     int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
         return major * numberOfMinorColors + minor + 1;
     }
+    int GetNumberOfMajorColors() {
+        return numberOfMajorColors;
+    }
+    int GetNumberOfMinorColors() {
+        return numberOfMinorColors;
+    }
 }
