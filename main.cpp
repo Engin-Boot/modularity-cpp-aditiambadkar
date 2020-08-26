@@ -26,7 +26,7 @@ void testPairToNumber(
 
 std::string ToString()
 {
-    int totalPairs = TelCoColorCoder::numberOfMajorColors * TelCoColorCoder::numberOfMajorColors; 
+    int totalPairs = numberOfMajorColors * numberOfMinorColors; 
     std::string codeToColorsMappings = "";
     for(int pairNumber = 1; pairNumber <= totalPairs; pairNumber++) {
         TelCoColorCoder::ColorPair colorPair =
