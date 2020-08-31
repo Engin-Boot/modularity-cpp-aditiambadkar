@@ -2,8 +2,9 @@
 #include <assert.h>
 #include "ColorPair.h"
 
-namespace TelCoColorCoder {
-    
+namespace TelCoColorCoder { 
+    enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
+    enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
     const char* MajorColorNames[] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
@@ -15,7 +16,6 @@ namespace TelCoColorCoder {
     };
     int numberOfMinorColors =
         sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-
     ColorPair::ColorPair(MajorColor major, MinorColor minor) : 
         majorColor(major), minorColor(minor) {};
     MajorColor ColorPair::getMajor() {
